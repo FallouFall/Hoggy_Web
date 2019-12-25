@@ -1,0 +1,98 @@
+
+
+
+ 
+<div class="spacer">
+    
+  <div class="jumbotron">
+      <div class="panel panel-primary">
+       
+          <div class="panel-body">
+
+
+              <div class="form-group">
+                  <table>
+                    <tr><td><h5>Rechercher Une Consultation</h5></td></tr>
+                    <tr>
+                      <td>  <input type="text" [(ngModel)]="nom"/></td>
+                  
+                      <td> <button class="btn btn-primary" (click)="chercherconsultation()">Chercher</button>  </td>
+                      <td>   </td>
+                      <td>   </td>
+        <td>  <button class="btn btn-primary" (click)="chercherconsultation()">Demander Informations</button>
+        </td>
+                    </tr>
+                  </table>
+                         
+                        
+                           
+                  
+                        
+                        </div>
+            <table class="table table-striped">
+              <tr>
+                <th>Matricule</th>  <th>Nom</th>   <th>Prenom</th>   <th>Adresse</th>   <th>Telephone</th>
+                <th>Date Demander</th>  <th>Etat</th>    
+              </tr>
+              <tr *ngFor="let c of page?.content">
+                <td>    {{c.matricule}}</td> 
+                <td>   {{c.nom}}</td> 
+                <td>   {{c.prenom}}</td> 
+                <td>   {{c.adresse}}</td>
+                <td>   {{c.telephone}}</td> 
+                <td>   {{c.daterv}}</td> 
+                <td>   {{
+                  c.valide}}</td> 
+             
+               
+      
+              </tr>
+            
+            </table>
+            <div >
+                
+         
+                   <ul  class="nav nav-pills">
+            
+          
+                  <li [ngClass]="{'active':i==currentPage}" *ngFor="let p of pages  ; let i=index">
+              <pre>    <a class="clickable" (click)="gotoPage(i)"> {{i}}   </a></pre> 
+                   
+                  </li>
+          
+                </ul>
+         
+              </div>
+          </div>
+      
+      
+         </div>
+  </div>
+  <br><br><br>
+  <div class="row">
+      <div class="col-md-4">
+        <div class="image1">
+          <h2> Mes Consultations</h2>
+          <p>
+              Centre Hospitalier  de Grand-Yoff Gestion des consultation ,des rendez vous et des vaccins.
+          </p>
+          <p><a  a routerLink="/consultation" class="btn btn-default">Plus d'informations  &raquo;</a></p>
+      </div>
+    </div>
+      <div class="col-md-4">
+          <div class="image1">
+          <h2>Mes Render-Vous</h2>
+          <p>Centre Hospitalier  de Grand-Yoff Gestion des consultation ,des rendez vous et des vaccins.</p>
+          <p><a a routerLink="/rendervous" class="btn btn-default" >Plus d'informations  &raquo;</a></p>
+      </div>
+    </div>
+      <div class="col-md-4">
+          <div class="image1">
+            <h2> Mes Demandes</h2>
+          <p>Centre Hospitalier  de Grand-Yoff Gestion des consultation ,des rendez vous et des vaccins.</p>
+          <p><a  a routerLink="/vaccin" class="btn btn-default" >Plus d'informations  &raquo;</a></p>
+      </div>
+    </div>
+  </div>
+  
+</div>

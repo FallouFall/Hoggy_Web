@@ -1,0 +1,80 @@
+body {
+    
+      
+   }
+   
+   .clickable{
+       cursor: pointer;
+       background-color: rgb(255, 255, 255);
+       width: 30px;height: 5px;
+   border-radius: 6px;
+   
+   
+   }
+   .clickable:hover{
+       cursor: pointer;
+       background-color: rgb(19, 112, 233);
+       width: 30px;height: 5px;
+   border-radius: 6px;
+   
+   
+   }
+   
+   
+   h1{
+   
+       font-family: Arial, Helvetica, sans-serif;
+   }
+   .jumbotron {
+       background-image: url("..\about\a5.png");
+       background-repeat: no-repeat;
+       background-size: cover;
+       
+       
+   }
+   /* Set padding to keep content from hitting the edges */
+   .body-content {
+       padding-left: 15px;
+       padding-right: 15px;
+   }
+   
+   /* Override the default bootstrap behavior where horizontal description lists 
+      will truncate terms that are too long to fit in the left column 
+   */
+   .dl-horizontal dt {
+       white-space: normal;
+   }
+   
+   /* Set width on the form input elements since they're 100% wide by default */
+   input,
+   select,
+   textarea {
+       max-width: 280px;
+   }
+   
+   .spacer
+   {
+    margin-right: 25px;
+    margin-left: 25px;
+    margin-bottom: -100px;
+   
+   }
+   
+   
+   .col-md-4:hover{
+       background-color: #18b1f3;
+       border-radius:24px;
+   
+   }
+   
+   
+   
+   
+       
+   
+   
+   
+   
+   
+   
+   

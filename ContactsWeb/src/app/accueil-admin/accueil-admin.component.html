@@ -1,0 +1,165 @@
+
+
+
+
+ 
+<div class="spacer">
+  
+
+    <br><br>
+    <table class="table table-dark">
+        <tr>
+     
+  
+          <td>  <button class="btn btn-primary" (click)="cons()" >Consultations</button> </td>
+          <td>  <button class="btn btn-primary" (click)="rv()"  >Render-Vous</button> </td>
+          <td>  <button class="btn btn-primary" >Hopitalisation</button> </td>
+
+        </tr>
+      </table>
+
+      <div class="panel panel-primary" *ngIf="mode==1">
+    <div class="jumbotron1">
+        
+              <div class="form-group">
+                  <table class="me">
+                    <tr><td><h5>Rechercher Une Consultation</h5></td></tr>
+                    <tr>
+                      <td>  <input type="text" [(ngModel)]="name"/></td>
+                  
+                      <td> <button class="btn btn-primary" (click)="chercherconsultation()">Chercher</button>  </td>
+                      <td>   </td>
+                      <td>   </td>
+
+                    </tr>
+                  </table>
+                         
+                        
+                           
+                  
+                        
+                        </div>
+          
+        
+           
+              <table class="table table-striped">
+             
+                <tr>
+                  <th>Matricule</th>  <th>Nom</th>   <th>Prenom</th>  <th>Prochain Rv</th>  
+                  <th>Date Consultation</th>  <th>Par</th>    
+                </tr>
+             
+                <tr *ngFor="let c of page?.content"> 
+                  <td>    {{c.matricule}}</td> 
+                   <td>   {{c.nom}}</td> 
+                   <td>   {{c.prenom}}</td> 
+                   <td>   {{c.daterv}}</td>
+                   <td>   {{c.consultation}}</td> 
+                   <td>   {{c.docteur}}</td> 
+                  
+                 
+        
+                </tr>
+              
+              </table>
+             
+              <div >
+                  
+           
+                     <ul  class="nav nav-pills">
+              
+            
+                    <li [ngClass]="{'active':i==currentPage}" *ngFor="let p of pages  ; let i=index">
+                <pre>    <a class="clickable" (click)="gotoPage(i)"> {{i}}   </a></pre> 
+                     
+                    </li>
+            
+                  </ul>
+           
+                </div>
+              
+          
+            </div>
+        
+          </div>
+
+
+
+
+          <div class="panel panel-primary" *ngIf="mode==2">
+            <div class="jumbotron2">
+                
+                      <div class="form-group">
+                          <table class="me">
+                            <tr><td><h5>Rechercher Un Render Vous</h5></td></tr>
+                            <tr>
+                              <td>  <input type="text" [(ngModel)]="namerv"/></td>
+                          
+                              <td> <button class="btn btn-primary" (click)="chercherrv()">Chercher</button>  </td>
+                              <td>   </td>
+                              <td>   </td>
+        
+                            </tr>
+                          </table>
+                                 
+                                
+                                   
+                          
+                                
+                                </div>
+                  
+                
+                   
+                      <table class="table table-striped">
+                     
+                        <tr>
+                          <th>Matricule</th>  <th>Nom</th>   <th>Prenom</th>  <th>Prochain Rv</th>  
+                          <th>Date Consultation</th>  <th>Par</th>    
+                        </tr>
+                     
+                        <tr *ngFor="let c of pagerv?.content"> 
+                          <td>    {{c.matricule}}</td> 
+                           <td>   {{c.nom}}</td> 
+                           <td>   {{c.prenom}}</td> 
+                           <td>   {{c.daterv}}</td>
+                           <td>   {{c.consultation}}</td> 
+                           <td>   {{c.docteur}}</td> 
+                          
+                         
+                
+                        </tr>
+                      
+                      </table>
+                     
+                      <div >
+                          
+                   
+                             <ul  class="nav nav-pills">
+                      
+                    
+                            <li [ngClass]="{'active':t==currentPagerv}" *ngFor="let p of pagesrv  ; let t=index">
+                        <pre>    <a class="clickable" (click)="gotoPagerv(t)"> {{t}}   </a></pre> 
+                             
+                            </li>
+                    
+                          </ul>
+                   
+                        </div>
+                      
+                  
+                    </div>
+                
+                  </div>
+        
+
+
+
+
+
+
+
+
+
+
+
+</div>

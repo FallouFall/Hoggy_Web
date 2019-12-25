@@ -1,0 +1,133 @@
+<div class="spacer">
+    <div class="container">
+        <div class="panel panel-primary" *ngIf="mode==1">
+            <div class="panel-heading">Nouveau Contact
+
+
+            </div>
+            <div class="panel-body">
+
+                <div class="form-group">
+                  
+                    <input class="form-control" type="text" [(ngModel)]="contact.nom" placeholder="Nom"  />
+                  <br>
+                    <input class="form-control" type="text" [(ngModel)]="contact.prenom"  placeholder="Prenom" />
+                    <br>
+                    <input class="form-control" type="date" [(ngModel)]="contact.naissance"  min="1950-01-01" max="2010-01-01" placeholder="Date De Naissance" />
+                    <br>
+                    <input class="form-control" type="text" [(ngModel)]="contact.telephone"  placeholder="Telephone" />
+                    <br>
+                    <input class="form-control" type="text" [(ngModel)]="contact.email" placeholder="E-Mail" />
+                    <br>
+                    <input class="form-control" type="text" [(ngModel)]="contact.adresse"  placeholder="Adresse" />
+                    <br>
+                    <input class="form-control" type="text" [(ngModel)]="contact.login" placeholder="Login" />
+                    <br>
+                    <input class="form-control" type="password" [(ngModel)]="contact.password" placeholder="Password" />
+                    
+                    <br>
+                    <button class="btn btn-primary" (click)="  savecontact()">Enregistrer</button>
+                    <button routerLink="/about" class="btn btn-primary">Anuuler</button>
+                </div>
+
+            </div>
+            <div class="top">
+                <div class="row">
+                        <div class="col-md-4">
+                            <h2>Bienvenu</h2>
+                           
+                            <p>     L'ouverture d'un compte vous permet de voir vos Consultations,vos Render-Vous</p>
+        
+                        
+                            <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+                        </div>
+                   
+                 
+                    </div>
+        </div>
+
+        </div>
+        <div class="panel panel-primary" *ngIf="mode==2">
+            <div class="panel-heading">Confirmation </div>
+            <div class="panel-body">
+
+                <div class="form-group">
+                    <label class="control-label">Id:</label>
+                     <label> {{contact.id}}</label>
+                 
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label">Nom:</label>
+                    <label> {{contact.nom}}</label>
+                   
+                 </div>
+                 <div class="form-group">
+                    <label class="control-label">Prenom:</label>
+                    <label> {{contact.prenom}}</label>
+                   
+                 </div>
+
+                  
+                 <div class="form-group">
+                    <label class="control-label">Date de naissance:</label>
+                    <label> {{contact.naissance}}</label>
+                   
+                 </div>
+                   
+
+
+                 <div class="form-group">
+                    <label class="control-label">Telephone:</label>
+                    <label> {{contact.telephone}}</label>
+                   
+                 </div>
+                  
+
+
+                 <div class="form-group">
+                    <label class="control-label">E-Mail:</label>
+                    <label> {{contact.email}}</label>
+                   
+                 </div>
+
+                   
+                 <div class="form-group">
+                    <label class="control-label">Adresse:</label>
+                    <label> {{contact.adresse}}</label>
+                   
+                 </div>
+
+                 <div class="form-group">
+                    <label class="control-label">Login:</label>
+                    <label> {{contact.login}}</label>
+                 </div>
+                 
+                 
+                    
+                 <button class="btn btn-primary" (click)="mode=1">Nouveau Comptre</button>
+                </div>
+
+                <div class="bot">
+                    <div class="row">
+                            <div class="col-md-4">
+                                <h2>Le Team</h2>
+                               
+                                <p>     Un equipe devoue a votre service vous attend avec impatience.Rejouigner Nous!</p>
+            
+                            
+                                <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+                            </div>
+                       
+                     
+                        </div>
+            </div>
+
+            </div>
+        </div>
+
+   
+
+
+
+</div>

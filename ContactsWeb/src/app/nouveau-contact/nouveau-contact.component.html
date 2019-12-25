@@ -1,0 +1,60 @@
+<div class="spacer">
+    <div class="container">
+        <div class="panel panel-primary" *ngIf="mode==1">
+            <div class="panel-heading">Modification
+
+
+            </div>
+            <div class="panel-body">
+
+                <div class="form-group">
+                    <label class="control-label">Nom:</label>
+                    <input class="form-control" type="text" [(ngModel)]="contact.nom" />
+                    <label class="control-label">Prenom:</label>
+                    <input class="form-control" type="text" [(ngModel)]="contact.prenom" />
+                    <label class="control-label">Dat Nais:</label>
+                    <input class="form-control" type="date" [(ngModel)]="contact.naissance" />
+                    <label class="control-label">Telephone:</label>
+                    <input class="form-control" type="text" [(ngModel)]="contact.telephone" />
+                    <label class="control-label">E-Mail:</label>
+                    <input class="form-control" type="text" [(ngModel)]="contact.email" />
+                    <label class="control-label">Adresse:</label>
+                    <input class="form-control" type="text" [(ngModel)]="contact.adresse" />
+                    <label class="control-label">Login:</label>
+                    <input class="form-control" type="text" [(ngModel)]="contact.login" />
+                    <label class="control-label">Mot De Passe:</label>
+                    <input class="form-control" type="text" [(ngModel)]="contact.password" />
+                    <br>
+                    <button class="btn btn-primary" (click)="  update()">Enregistrer</button>
+                    <button routerLink="/toList" class="btn btn-primary">Anuuler</button>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="panel panel-primary" *ngIf="mode==2">
+            <div class="panel-heading">Confirmation </div>
+            <div class="panel-body">
+
+
+                <div class="form-group">
+                        <label class="control-label">Id:</label>
+                        <input class="form-control" type="text" value="{{contact.id}}" />
+                    <label class="control-label">Nom:</label>
+                    <input class="form-control" type="text" value="{{contact.nom}}" />
+                    <label class="control-label">Prenom:</label>
+                    <input class="form-control" type="text"value="{{contact.prenom}}" />
+                    <label class="control-label">Dat Nais:</label>
+                    <input class="form-control" type="date" value="{{contact.naissance}}" />
+                    <label class="control-label">Telephone:</label>
+                    <input class="form-control" type="text"value="{{contact.telephone}}" />
+                    <label class="control-label">E-Mail:</label>
+                    <input class="form-control" type="text" value="{{contact.email}}" />
+                    <label class="control-label">Photo:</label>
+                    <input class="form-control" type="text" value="{{contact.photo}}" />
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

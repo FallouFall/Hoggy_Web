@@ -1,0 +1,33 @@
+<div class="spacer">
+  <div class="container">
+      <div class="panel panel-primary" *ngIf="mode==1">
+          <div class="panel-heading">Nouveau Contact
+
+
+          </div>
+          <div class="panel-body">
+
+              <div class="form-group">
+                  <label class="control-label">Nom:</label>
+                  <input class="form-control" type="text" [(ngModel)]="contact.nom"  disabled="true"  />
+                  <label class="control-label">Prenom:</label>
+                  <input class="form-control" type="text" [(ngModel)]="contact.prenom"  disabled="true" />
+                  <label class="control-label">Dat Nais:</label>
+                  <input class="form-control" type="date" [(ngModel)]="contact.naissance" disabled="true"  />
+                  <label class="control-label">Telephone:</label>
+                  <input class="form-control" type="text" [(ngModel)]="contact.telephone"  disabled="true" />
+                  <label class="control-label">E-Mail:</label>
+                  <input class="form-control" type="text" [(ngModel)]="contact.email"  disabled="true" />
+                  <label class="control-label">Photo:</label>
+                  <input class="form-control" type="text" [(ngModel)]="contact.photo" disabled="true"  />
+                  <br>
+                  <button class="btn btn-primary" (click)="  delete()">Supprimer</button>
+                  <button routerLink="/toList" class="btn btn-primary">Anuuler</button>
+              </div>
+
+          </div>
+
+      </div>
+   
+  </div>
+</div>

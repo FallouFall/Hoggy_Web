@@ -1,0 +1,34 @@
+.spacer{
+    margin-top: 14px;
+    margin-left: -177px;
+    
+    }
+    input{
+        width: 50%;
+    }  
+.top{
+
+    background-image: url("..\about\a4.jpg");
+    margin-left: 52%;
+    margin-top:-31%;
+    width: 700px;
+    height: 300px;
+    border-radius: 15px;
+    padding: 2px;
+} 
+.bot{
+    
+    background-image: url("..\about\a1.jpg");
+    margin-left: 52%;
+    margin-top:-30%;
+    width: 700px;
+    height: 300px;
+    border-radius: 15px;
+    padding: 2px;
+    } 
+
+    .formulaire{
+
+        border: 1px ;
+        border-color: #18b1f3;
+    }

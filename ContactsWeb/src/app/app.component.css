@@ -1,0 +1,147 @@
+
+.barre {
+    background-color: black;
+    height: 100px;
+ 
+      
+   }
+   .spacer {
+  align-content: center;
+  margin-left: 15%;
+  padding-top: 2%;
+      
+   }
+   
+.logo{
+
+
+ 
+}
+
+ 
+
+
+
+
+   #menu a { 
+ 
+      display:block; 
+      color: white; 
+      font-size:18px;
+      text-shadow:0.3px 0.3px 0px black;
+      text-decoration:none;
+  
+  }
+  
+  #menu > li,
+  #menu > li li {
+      position: relative;
+      display:inline-block;
+      width: 220px;
+          height: 33px;
+      padding: 8px 17px;
+      background-color:rgba(2,2,2,0.2);
+  
+      border:0px solid;
+
+  
+      
+  }
+  #menu > li li { background: transparent none; }
+  #menu > li li a { color: #263238; }
+  #menu > li li:hover { background: #26afea;     /* Chrome, Safari, Opera */ 
+    }
+  #menu > li:first-child {
+    
+  
+      
+  }
+  #menu > li + li {
+  
+ 
+  }
+  #menu > li:last-child {
+   
+ 
+  }
+  #menu > li:hover {
+      background-color:rgba(2,2,2,0.3);
+  
+  }
+  /* (presque) fin de la partie positionnement/déco */
+  /* dans cette déclaration, on fixe le max-height */
+  #menu ul {
+      position: absolute;
+      top: 2em; left: 0;
+      max-height:0em;	
+      margin: 0; padding: 0;
+      background-color: #263238;
+      background-image: linear-gradient(#ffffff,#ffffff);
+      overflow: hidden;
+      transition: 0.4s max-height 0.1s;
+      
+      
+  }
+  /* ici on change la valeur de max-height au :hover */
+  #menu > li:hover ul {
+      /* à adapter, le minimum est le meilleur mais voyez large ?? */
+      max-height: 10.3em;
+          background-color: #263238;
+  }
+  footer p{
+  text-align:center;
+  font-style:italic;
+  font-weight:bold;
+  font:#00bcd4;
+  }
+  
+  
+  
+  
+  
+  
+  
+
+  
+
+  p
+  {
+  font-size:20px;
+  }
+ 
+
+
+  
+  
+
+  
+
+  a:visited
+  {
+  background-color:#263238;
+  }
+  a:link
+  {
+    color:#263238;
+   font-size:20px;
+  }
+  
+  li{
+  color:rgba(19,19,19,0.0);
+  }
+  a
+  {
+  
+                       color:silver;
+      text-decoration:none;
+  
+  }
+  
+  a:hover
+  {
+  
+                       color:rgba(19,19,19,0.8);
+      text-decoration:none;
+  
+  }
+   

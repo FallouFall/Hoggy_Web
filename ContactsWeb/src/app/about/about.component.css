@@ -1,0 +1,167 @@
+body {
+    
+   
+}
+
+
+h1{
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.spacer
+{
+    margin:15px;
+    margin-bottom: -100px;
+
+}
+.jumbotron {
+    background-image: url("a2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+     
+
+
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.col-md-4:hover{
+    background-color: #18b1f3;
+    border-radius:24px;
+
+}
+
+
+
+.image1{
+    
+    border: 1px solid;
+        border-color:#18b1f3;
+          border-radius:24px;
+          padding: 10px;
+          
+    
+    }
+    
+
+
+
+
+
+/* partie positionnement et déco */
+#menu a { 
+ 
+      display:block; 
+      color: silver; 
+      font-size:18px;
+      text-shadow:0.3px 0.3px 0px black;
+      text-decoration:none;
+  }
+  
+  #menu > li,
+  #menu > li li {
+      position: relative;
+      display:inline-block;
+      width: 220px;
+          height: 33px;
+      padding: 8px 17px;
+      background-color:black;
+  
+      border:0px solid;
+  border-color:#cfd8dc;
+  
+      
+  }
+  #menu > li li { background: transparent none; }
+  #menu > li li a { color: #263238; }
+        /* Chrome, Safari, Opera */ 
+      
+  #menu > li:first-child {
+    
+      border-right: 1px solid #263238;
+      
+  }
+  #menu > li + li {
+  
+      border-left: 1px solid #263238;
+      border-right: 1px solid #263238;
+  }
+  #menu > li:last-child {
+      border-right: 1px solid #263238;
+      border-left: 1px solid #263238;
+
+  }
+  #menu > li:hover {
+      background-color:rgba(2,2,2,0.3);
+  
+  }
+  /* (presque) fin de la partie positionnement/déco */
+  /* dans cette déclaration, on fixe le max-height */
+  #menu ul {
+      position: absolute;
+      top: 2em; left: 0;
+      max-height:0em;	
+      margin: 0; padding: 0;
+      background-color: #263238;
+      background-image: linear-gradient(#fff,#ddd);
+      overflow: hidden;
+      transition: 0.4s max-height 0.1s;
+      
+      
+  }
+  /* ici on change la valeur de max-height au :hover */
+  #menu > li:hover ul {
+      /* à adapter, le minimum est le meilleur mais voyez large ?? */
+      max-height: 10.3em;
+          background-color: #263238;
+  }
+  footer p{
+  text-align:center;
+  font-style:italic;
+  font-weight:bold;
+  font:#00bcd4;
+  }
+  
+  
+ .pane{
+
+padding-left: 100;
+    background-color: black; 
+ }

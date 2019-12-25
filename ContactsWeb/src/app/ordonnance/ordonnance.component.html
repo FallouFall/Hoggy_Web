@@ -1,0 +1,99 @@
+
+
+
+ 
+<div class="spacer">
+  
+       
+ <div class="jumbotron">
+
+     <div class="form-group">
+         <table class="me">
+           <tr><td><h5>Rechercher Une Preinsciption</h5></td></tr>
+           <tr>
+             <td>  <input type="text" [(ngModel)]="nom"/></td>
+         
+             <td> <button class="btn btn-primary" (click)="chercherordonnance()">Chercher</button>  </td>
+             <td>   </td>
+             <td>   </td>
+
+
+           </tr>
+         </table>
+                
+               
+                  
+         
+               
+               </div>
+ 
+
+  
+     <table class="table table-striped">
+    
+       <tr>
+         <th>Matricule</th>  <th>Nom</th>   <th>Prenom</th>  <th>Date Naiss</th>  
+         <th>Date Preinscription</th>  <th>Docteur</th>    
+       </tr>
+    
+       <tr *ngFor="let c of page?.content"> 
+         <td>    {{c.matricule}}</td> 
+          <td>   {{c.nom}}</td> 
+          <td>   {{c.prenom}}</td> 
+          <td>   {{c.naissance}}</td>
+          <td>   {{c.datepreinscription}}</td> 
+          <td>   {{c.docteur}}</td> 
+
+          </tr>
+
+       <tr *ngFor="let c of page?.content"> 
+       <td></td> <td></td>   <td></td> <th>Liste Medicaments</th> <td></td> <td></td>
+      </tr>
+
+      <tr *ngFor="let c of page?.content"> 
+        <td> {{c.medicament1}}
+          </td> 
+          
+          <td>{{c.medicament2}}</td>
+          <td>{{c.medicament3}}</td>
+          <td>{{c.medicament4}}</td>
+          <td>{{c.medicament5}}</td>
+          <td>{{c.medicament6}}</td>
+       </tr>
+       <tr *ngFor="let c of page?.content"> 
+          <td> {{c.medicament7}}
+            </td> 
+            
+            <td>{{c.medicament8}}</td>
+            <td>{{c.medicament9}}</td>
+            <td>{{c.medicament10}}</td>
+            <td></td>
+            <td></td>
+           
+         </tr>
+     
+     </table>
+    
+     <div >
+         
+  
+            <ul  class="nav nav-pills">
+     
+   
+           <li [ngClass]="{'active':i==currentPage}" *ngFor="let p of pages  ; let i=index">
+       <pre>    <a class="clickable" (click)="gotoPage(i)"> {{i}}   </a></pre> 
+            
+           </li>
+   
+         </ul>
+  
+       </div>
+     
+ 
+
+
+ </div>
+
+
+
+</div>

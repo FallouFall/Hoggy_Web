@@ -1,0 +1,87 @@
+<br>
+<div class="spacer">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <span class="badge badge-primary">Liste des Contactes</span>
+      <br>
+      <br>
+    </div>
+    <div class="panel-body">
+
+      <div class="form-group">
+
+        <label>Rechercher Nom :</label>
+        <input type="text" [(ngModel)]="nom"/>
+        <button class="btn btn-primary" (click)="chercher()">Chercher</button>
+
+
+
+      </div>
+
+
+
+
+
+      <table class="table  table-stripped">
+
+        <thead class="thead-dark">
+
+
+          <tr>
+            <th scope="col"> NOM </th>
+            <th> PRENOM </th>
+            <th> NAISSANCE </th>
+            <th> EMAIL </th>
+            <th> TELEPHONE </th>
+            <th>PHOTO</th>
+            <th>MODIFIER </th>
+            <th>SUPPRIMER</th>
+          </tr>
+        </thead>
+        <tr *ngFor="let c of page?.content">
+
+          <td>
+            {{c.nom}}
+          </td>
+          <td>
+            {{c.prenom}}
+          </td>
+          <td>
+            {{c.naissance}}
+          </td>
+          <td>
+            {{c.email}}
+          </td>
+          <td>
+            {{c.telephone}}
+          </td>
+          <td>
+              {{c.photo}}
+            </td>
+          <td>
+              <button routerLink="/editContact/{{c.id}}"  class="btn btn-primary">Modifier</button>
+          </td>
+          <td>
+            <button routerLink="/supprimer/{{c.id}}"  class="btn btn-primary">Supprimer</button>
+            </td> 
+            
+        </tr>
+      </table>
+     <div >
+       
+
+          <ul  class="nav nav-pills">
+   
+ 
+         <li [ngClass]="{active:i==currentPage}" *ngFor="let p of pages ; let i=index">
+          <a class="clikable" (click)="gotoPage(i)">   {{i}}   </a>
+          
+         </li>
+ 
+       </ul>
+
+     </div>
+    </div>
+  </div>
+
+</div>

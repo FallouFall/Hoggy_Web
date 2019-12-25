@@ -1,0 +1,131 @@
+<div class="spacer">
+    <div class="container">
+        <div class="panel panel-primary" *ngIf="mode==1">
+            <div class="panel-heading">Nouveau Render-Vous
+
+
+            </div>
+            <div class="panel-body">
+
+                <div class="form-group">
+                  <div> </div>
+                    <input class="form-control" type="text" [(ngModel)]="contact.nom" placeholder="Nom" required  minlength="2" maxlength="15"/>
+                  <br>
+                    <input class="form-control" type="text" [(ngModel)]="contact.prenom"   placeholder="Prenom" required  minlength="2" maxlength="15"/>
+                    <br>
+                    <input class="form-control" type="date" [(ngModel)]="contact.naissance"  placeholder="Date De Naissance"   />
+                    <br>
+                    <input class="form-control" type="tel" [(ngModel)]="contact.telephone"  placeholder="Telephone" minlength="9" maxlength="9"  />
+                    <br>
+                    <input class="form-control" type="email" [(ngModel)]="contact.email" placeholder="E-Mail" required  />
+                    <br>
+                    <input class="form-control" type="text" [(ngModel)]="contact.adresse"  placeholder="Adresse" minlength="5" maxlength="15"  />
+                    <br>
+                   
+                
+                  
+                    <button class="btn btn-primary" (click)="  savecontact()">Enregistrer</button>
+                    <button routerLink="/about" class="btn btn-primary">Anuuler</button>
+                </div>
+
+            </div>
+            <div class="top">
+                <div class="row">
+                        <div class="col-md-4">
+                            <h2>Bienvenu</h2>
+                           
+                            <p>     L'ouverture d'un compte vous permet de voir vos Consultations,vos Render-Vous</p>
+        
+                        
+                            <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+                        </div>
+                   
+                 
+                    </div>
+        </div>
+
+        </div>
+        <div class="panel panel-primary" *ngIf="mode==2">
+            <div class="panel-heading">Confirmation </div>
+            <div class="panel-body">
+<div class="formulaire">
+                <div class="form-group">
+                    <label class="control-label">Matricule:</label>
+                     <label><b> {{contact.matricule}}</b></label>
+                 
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label">Nom:</label>
+                    <label> {{contact.nom}}</label>
+                   
+                 </div>
+                 <div class="form-group">
+                    <label class="control-label">Prenom:</label>
+                    <label> {{contact.prenom}}</label>
+                   
+                 </div>
+
+                  
+                 <div class="form-group">
+                    <label class="control-label">Date de naissance:</label>
+                    <label> {{contact.naissance}}</label>
+                   
+                 </div>
+                   
+
+
+                 <div class="form-group">
+                    <label class="control-label">Telephone:</label>
+                    <label> {{contact.telephone}}</label>
+                   
+                 </div>
+                  
+
+
+                 <div class="form-group">
+                    <label class="control-label">E-Mail:</label>
+                    <label> {{contact.email}}</label>
+                   
+                 </div>
+
+                   
+                 <div class="form-group">
+                    <label class="control-label">Adresse:</label>
+                    <label> {{contact.adresse}}</label>
+                   
+                 </div>
+
+                 <div class="form-group">
+                    <label class="control-label">Date Rv:</label>
+                    <label> <b>{{contact.daterv}}</b></label>
+                 </div>
+                </div>
+                 
+                    
+                 <button class="btn btn-primary" (click)="mode=1">Nouveau Render Vous</button>
+                </div>
+
+                <div class="bot">
+                    <div class="row">
+                            <div class="col-md-4">
+                                <h2>Le Team</h2>
+                               
+                                <p>     Un equipe devoue a votre service vous attend avec impatience.Rejouigner Nous!</p>
+            
+                            
+                                <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+                            </div>
+                       
+                     
+                        </div>
+            </div>
+
+            </div>
+        </div>
+
+   
+
+
+
+</div>

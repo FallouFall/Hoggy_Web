@@ -1,0 +1,20 @@
+
+.spacer
+{
+    margin:25px;
+
+}
+.jumbotron {
+  
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 5px;
+    border-radius: 25px;
+    
+    
+}
+hr{
+    
+        background-color: #11d4f7;
+    }
+  
